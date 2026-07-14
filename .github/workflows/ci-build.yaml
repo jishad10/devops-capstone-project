@@ -37,6 +37,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Patch nose for Python 3.11 compatibility
+        run: |
+          NOSE_PATH=$(python -c "import nose; import os; print(os.path.dirname(nose.__file__))")
+          grep -rl "collections\.Callable" "$NOSE_PATH" | xargs -r sed -i 's/collections\.Callable/collections.abc.Callable/g'
+
       - name: Lint with flake8
         run: |
           flake8 service --count --max-line-length=127 --extend-ignore=E402 --statistics
