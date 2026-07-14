@@ -2,6 +2,7 @@
 Package: service
 Initialize the Flask app and set up logging
 """
+import common.session
 import sys
 from flask import Flask
 from flask_talisman import Talisman

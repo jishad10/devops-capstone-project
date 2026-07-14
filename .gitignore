@@ -1,7 +1,7 @@
 __pycache__/
 *.pyc
-.env
 venv/
-.vscode/
 .idea/
 *.log
+config.bat
+node_modules
