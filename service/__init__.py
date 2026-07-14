@@ -10,8 +10,8 @@ from service.common import log_handlers
 app = Flask(__name__)
 app.config.from_object(config)
 
-from service import routes, models
-from service.common import error_handlers, cli_commands
+from service import routes, models  # noqa: F401
+from service.common import error_handlers, cli_commands  # noqa: F401
 
 try:
     models.init_db(app)
