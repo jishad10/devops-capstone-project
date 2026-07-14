@@ -12,3 +12,5 @@ honcho==1.1.0
 httpie==3.2.2
 factory-boy==3.2.1
 Werkzeug==2.3.7
+Flask-Talisman==1.1.0
+Flask-CORS==4.0.0
